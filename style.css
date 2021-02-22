@@ -1,3 +1,9 @@
+:root {
+  --hacker-background-color: black;
+  --hacker-font-color: rgb(48, 235, 23);
+  --hacker-shadow-color: rgba(62, 112, 50, 0.15);
+}
+
 *,
 *::before,
 *::after {
@@ -13,8 +19,8 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: 'DotGothic16', sans-serif;
+  background-color:var(--hacker-background-color);
 }
 
 .wrapper {
@@ -27,26 +33,30 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--hacker-font-color);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: (var(--hacker-background-color));
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  box-shadow: var(--hacker-shadow-color) 0px 0px 8px 5px;
+  color: var(--hacker-font-color);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
 }
 
+.card-header {
+  text-align: center;
+}
+
 .card-header::after {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--hacker-background-color);
   height: 2px;
 }
 
@@ -62,7 +72,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--hacker-background-color);
   height: 2px;
 }
 
@@ -73,10 +83,11 @@ header {
 }
 
 .btn {
+  font-family: 'DotGothic16', sans-serif;
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color:  var(--hacker-font-color);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+  box-shadow: var(--hacker-shadow-color) 0px 0px 6px 3px
     0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
@@ -98,6 +109,9 @@ button[disabled] {
 }
 
 #password {
+  font-family: 'DotGothic16', sans-serif;
+  letter-spacing: 2px;
+  background-color: var(--hacker-background-color);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -109,14 +123,19 @@ button[disabled] {
   padding-right: 15px;
   padding-bottom: 85px;
   font-size: 1.2rem;
+  color: var(--hacker-font-color);
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed var(--hacker-font-color);
   border-radius: 6px;
   resize: none;
   overflow: hidden;
 }
+::placeholder { 
+  color: var(--hacker-font-color);
+  opacity: 1;
+  font-family: 'DotGothic16', sans-serif;
 
 @media (max-width: 690px) {
   .btn {
